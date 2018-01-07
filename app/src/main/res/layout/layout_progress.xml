@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/fl_content"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true"
+              android:layout_marginTop="-50dp"
+              android:background="#50000000"
+              android:orientation="vertical"
+              android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/operation_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_vol"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_vertical"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="25dp">
+
+        <View
+            android:layout_width="94dp"
+            android:layout_height="4dp"
+            android:layout_gravity="left"
+            android:background="#000000"
+            android:scaleType="fitXY"
+            />
+
+        <View
+            android:id="@+id/operation_percent"
+            android:layout_width="94dp"
+            android:layout_height="4dp"
+            android:layout_gravity="left"
+            android:background="#FFF"
+            android:scaleType="fitXY"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_videolayout"
+        android:layout_width="wrap_content"
+        android:layout_height="240dp">
+
+        <com.best.testvideoview.MyVideoView
+            android:id="@+id/vv_videoView"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            />
+
+        <include layout="@layout/layout_progress"></include>
+
+        <LinearLayout
+            android:id="@+id/ll_controllerBar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+            <!--进度条-->
+            <SeekBar
+                android:id="@+id/sb_progress_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginLeft="-20dp"
+                android:layout_marginRight="-20dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="20"
+                android:progressDrawable="@drawable/seekbar_style_pro"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#101010"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_left_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <!--播放暂停-->
+                    <Button
+                        android:id="@+id/bt_start_pause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Pause"/>
+                    <!--现在的时间-->
+                    <TextView
+                        android:id="@+id/tv_time_current"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="00:00:00"
+                        android:textColor="#FFF"
+                        android:textSize="20sp"/>
+                    <!--斜杠-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="/"
+                        android:textColor="#4C4C4C"
+                        android:textSize="5dp"/>
+                    <!--总共的时间-->
+                    <TextView
+                        android:id="@+id/tv_time_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="00:00:00"
+                        android:textColor="#4C4C4C"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_right_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/ll_left_layout"
+                    android:gravity="center_vertical|right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_vol_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Vol"
+                        android:textColor="#FFF"
+                        android:textSize="20sp"
+                        android:visibility="gone"/>
+                    <!--音量-->
+                    <SeekBar
+                        android:id="@+id/sb_vol_seekbar"
+                        android:layout_width="143dp"
+                        android:layout_height="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="20"
+                        android:progressDrawable="@drawable/seekbar_style_pro"
+                        android:visibility="gone"/>
+
+                    <View
+                        android:id="@+id/v_line"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#1E1E1E"
+                        android:visibility="gone"></View>
+                    <!--横竖屏切换-->
+                    <Button
+                        android:id="@+id/bt_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Switch"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
